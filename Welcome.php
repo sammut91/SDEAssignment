@@ -9,10 +9,10 @@
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
     echo "total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
-    $servername = "localhost";
-    $user="abc";
-    $password="abc";
-    $dbname="Assignmentdb1";
+    $servername = "sdeassignment1.database.windows.net";
+    $user="lukesammut";
+    $password="1Password";
+    $dbname="Assignment1";
 
     // Create connection
     $conn = new mysqli($servername,$user,$password,$dbname);
