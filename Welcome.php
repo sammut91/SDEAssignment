@@ -16,14 +16,18 @@
     $password="1Password";
     $dbname="Assignment1";
 
-    // Create connection
-    $conn = new mysqli($servername,$user,$password,$dbname);
+    $connectionInfo = array("UID" => "lukesammut@sdeassignment1", "pwd" => "{your_password_here}", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $serverName = "tcp:sdeassignment1.database.windows.net,1433";
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-    $conn = mysqli_init();
-    mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306);
-    if (mysqli_connect_errno($conn)) {
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
-    }
+    // Create connection
+    // $conn = new mysqli($servername,$user,$password,$dbname);
+
+    // $conn = mysqli_init();
+    // mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306);
+    // if (mysqli_connect_errno($conn)) {
+    // die('Failed to connect to MySQL: '.mysqli_connect_error());
+    // }
 
     echo "Connected successfully";
     $firstname = $_POST['firstname'];
