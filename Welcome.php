@@ -11,10 +11,10 @@
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
     echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
-    $servername = "sdeassignment1.database.windows.net";
-    $user="lukesammut";
-    $password="1Password";
-    $dbname="Assignment1";
+    // $servername = "sdeassignment1.database.windows.net";
+    // $user="lukesammut";
+    // $password="1Password";
+    // $dbname="Assignment1";
 
     $connectionInfo = array("UID" => "lukesammut@sdeassignment1", "pwd" => "{your_password_here}", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
     $serverName = "tcp:sdeassignment1.database.windows.net,1433";
@@ -29,7 +29,12 @@
     // die('Failed to connect to MySQL: '.mysqli_connect_error());
     // }
 
-    echo "Connected successfully";
+    if( $conn ) {
+        echo "Connection established.<br />";
+    } else{
+        echo "Connection could not be established.<br />";
+        die( print_r( sqlsrv_errors(), true));
+    }
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $tyres = $_POST['tyres'];
