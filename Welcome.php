@@ -2,12 +2,14 @@
 <html>
 <head>
 <title> Bob's Auto Parts: Order result</title>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 </head>
 <body>
     <?php
 
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
-    echo "total amount due is: ".($_POST["tyres"]* 110).'<br/>';
+    echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
     $servername = "sdeassignment1.database.windows.net";
     $user="lukesammut";
@@ -37,7 +39,7 @@
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    $conn->close();
+    mysqli_close($conn);
 
     ?>
 </body>
