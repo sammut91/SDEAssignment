@@ -17,10 +17,12 @@
     // Create connection
     $conn = new mysqli($servername,$user,$password,$dbname);
 
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $conn = mysqli_init();
+    mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306);
+    if (mysqli_connect_errno($conn)) {
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
     }
+
     echo "Connected successfully";
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
