@@ -79,7 +79,7 @@ else
     $tyres = $_POST['tyres'];
     $id = '59658326573465';
 
-    $sql = "INSERT INTO orders (firstname, id, lastname, noOftyres)
+    $sql = "INSERT INTO orders (firstname, id, lastname, tyres)
     VALUES ('$firstname', '$id', '$lastname', '$tyres')";
 
     if ($conn->query($sql) === TRUE) {
