@@ -11,12 +11,7 @@
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
     echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
-    // $servername = "sdeassignment1.database.windows.net";
-    // $user="lukesammut";
-    // $password="1Password";
-    // $dbname="Assignment1";
-
-    $connectionInfo = array("UID" => "lukesammut@sdeassignment1", "pwd" => "{your_password_here}", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+    $connectionInfo = array("UID" => "phpappuser@sdeassignment1", "pwd" => "1Password", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
     $serverName = "tcp:sdeassignment1.database.windows.net,1433";
     $conn = sqlsrv_connect($serverName, $connectionInfo);
 
