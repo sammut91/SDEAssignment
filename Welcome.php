@@ -51,8 +51,8 @@ else
     echo "Failed to connect to the database.\n";
 }
 
-    // echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
-    // echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
+    echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
+    echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
     // $connectionInfo = array("UID" => "phpappuser@sdeassignment1", "pwd" => "1Password", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
     // $serverName = "tcp:sdeassignment1.database.windows.net,1433";
@@ -77,9 +77,10 @@ else
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $tyres = $_POST['tyres'];
+    $id = '59658326573465';
 
-    $sql = "INSERT INTO orders (firstname, lastname, noOftyres)
-    VALUES ('$firstname', '$lastname', '$tyres')";
+    $sql = "INSERT INTO orders (firstname, id, lastname, noOftyres)
+    VALUES ('$firstname', '$id', '$lastname', '$tyres')";
 
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
