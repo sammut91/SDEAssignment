@@ -82,13 +82,13 @@ else
     $sql = "INSERT INTO orders (firstname, id, lastname, tyres)
     VALUES ('$firstname', '$id', '$lastname', '$tyres')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($dbConnection->query($sql) === TRUE) {
     echo "New record created successfully";
     } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $dbConnection->error;
     }
 
-    mysqli_close($conn);
+    mysqli_close($dbConnection);
 
     ?>
 </body>
