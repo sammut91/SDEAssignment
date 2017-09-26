@@ -77,7 +77,7 @@ else
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $tyres = $_POST['tyres'];
-    $id = '59658326573465';
+    $id = time(void);
 
     $sql = "INSERT INTO orders (firstname, id, lastname, tyres)
     VALUES ('$firstname', '$id', '$lastname', '$tyres')";
