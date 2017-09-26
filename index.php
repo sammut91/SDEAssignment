@@ -11,10 +11,10 @@
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
  	h3 { font-size: 1.2em; }
- 	body { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px}
+ 	div { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px}
  	th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
  	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
-	input[type=submit] { 
+	input { 
 		background-color: #009acd;
 		border: none;
 		color: white;
@@ -25,6 +25,7 @@
  </style>
  </head>
  <body>
+ <div>
  <h1>Order Form</h1>
  <p>Please enter your details and then click <strong>Submit</strong> to enter your order.</p>
  <form  action="welcome.php" method="post">
@@ -35,5 +36,6 @@
     <input type="submit" name="Calculate"><br/>
  
  </form>
+ </div>
  </body>
  </html>
