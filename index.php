@@ -2,16 +2,17 @@
  <head>
  <Title>Bob's Auto Parts: Order Form</Title>
  <style type="text/css">
- 	body { background-color: #fff; border-top: solid 10px #009acd;
+ 	body { background-color: #fff;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
  	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
  	}
-	h1 { color: white; background-color: #1e90ff; margin-bottom: 0; padding-bottom: 0; text-align: center; }
+	h1 { color: white; background-color: #009acd; margin-bottom: 0; padding-bottom: 0; text-align: center; }
 	h2, h3 { color: #00688b; margin-bottom: 0; padding-bottom: 0; text-align: center; }
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
  	h3 { font-size: 1.2em; }
- 	div { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px; padding: 20; margin: 20}
+ 	div { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px; padding: 20; margin: 20;
+		border: 5px; border-color: #000; }
 	input[type=submit] { 
 		background-color: #009acd;
 		border: none;
@@ -20,7 +21,7 @@
 		text-decoration: none;
 		margin: 4px 2px;
 		cursor: pointer;}
-	input { width: 400px; }
+	input { width: 400px; font-size: 1em; }
  </style>
  </head>
  <body>
