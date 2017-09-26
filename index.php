@@ -11,7 +11,7 @@
  	h2 { font-size: 1.75em; }
  	h3 { font-size: 1.2em; }
  	div { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px; padding: 20; margin: 20}
-	input [type=submit]{ 
+	input[type=submit] { 
 		background-color: #009acd;
 		border: none;
 		color: white;
@@ -29,9 +29,9 @@
  <p>Please enter your details and then click <strong>Submit</strong> to enter your order.</p>
  <form  action="welcome.php" method="post">
  
-    First Name: <input type="text" name="firstname" value="<?php echo $firstname;?>"><br/><br/>
-    Last Name:  <input type="text" name="lastname" value="<?php echo $lastname;?>"><br/><br/>
-    Number of Tyres: <input type="number" name="tyres" value="<?php echo $tyres;?>"><br/><br/>
+	<input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstname;?>"><br/><br/>
+	<input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastname;?>"><br/><br/>
+	<input type="number" name="tyres" placeholder="# of tyres" value="<?php echo $tyres;?>"><br/><br/>
     <input type="submit" name="Calculate"><br/>
  
  </form>
