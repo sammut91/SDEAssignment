@@ -1,4 +1,4 @@
-<<html>
+<html>
 <head>
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
@@ -34,7 +34,7 @@ table.db-table tr	{
 	}
  </style>
 </head>
-<<body>
+<body>
 
 <?php 
         // From the blog-post
@@ -77,8 +77,7 @@ $result = mysqli_query($dbConnection,"SELECT * FROM orders");
 $all_property = array();  //declare an array for saving property
 //showing property
 echo '<div class = "center">';
-echo '<table cellpadding="0" cellspacing="0" class="db-table">>
-        <tr>';  //initialize table tag
+echo '<table cellpadding="0" cellspacing="0" class="db-table"><tr>';  //initialize table tag
 while ($property = mysqli_fetch_field($result)) {
     echo '<th>' . $property->name . '</th>';  //get field name for header
     array_push($all_property, $property->name);  //save those to array
