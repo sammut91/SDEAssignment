@@ -2,10 +2,18 @@
 <head>
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
-table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
+table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; }
 table.db-table th	{ background-color:#4CAF50; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
 table.db-table td	{ padding:15px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
 table.db-table tr	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+.center {
+		background-color: #F7F7F7;
+		border: 5px; 
+		border-color: #000;
+		margin: auto;
+		width: 60%;
+		padding: 10px;
+	}
  </style>
 </head>
 <<body>
@@ -50,6 +58,7 @@ else
 $result = mysqli_query($dbConnection,"SELECT * FROM orders");
 $all_property = array();  //declare an array for saving property
 //showing property
+echo '<div class = "center">';
 echo '<table cellpadding="0" cellspacing="0" class="db-table">>
         <tr>';  //initialize table tag
 while ($property = mysqli_fetch_field($result)) {
@@ -66,6 +75,7 @@ while ($row = mysqli_fetch_array($result)) {
     }
     echo '</tr>';
 }
+echo '</div>';
 
 mysqli_close($dbConnection);
 ?>
