@@ -23,7 +23,9 @@
 		cursor: pointer;}
 	input { width: 400px; font-size: 1em; }
 	form { 
-		margin: 0 auto; 
+		position:fixed;
+   		top:50%;
+   		left:50%;
 		width:400px;	
 	}
  </style>
