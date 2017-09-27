@@ -51,7 +51,7 @@ $result = mysqli_query($dbConnection,"SELECT * FROM orders");
 $all_property = array();  //declare an array for saving property
 
 //showing property
-echo '<table class="data-table">
+echo '<table cellpadding="0" cellspacing="0" class="db-table">>
         <tr class="data-heading">';  //initialize table tag
 while ($property = mysqli_fetch_field($result)) {
     echo '<td>' . $property->name . '</td>';  //get field name for header
