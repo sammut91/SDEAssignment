@@ -11,8 +11,6 @@
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
  	h3 { font-size: 1.2em; }
- 	div { background-color: #F7F7F7; margin-top: 0.75em; max-width: 400px; padding: 20; margin: 20;
-		border: 5px; border-color: #000; }
 	input[type=submit] { 
 		background-color: #009acd;
 		border: none;
@@ -22,16 +20,19 @@
 		margin: 4px 2px;
 		cursor: pointer;}
 	input { width: 400px; font-size: 1em; }
-	form { 
-		position:fixed;
-   		top:50%;
-   		left:50%;
-		width:400px;	
+	.center {
+		background-color: #F7F7F7; 
+	 	max-width: 400px;
+		border: 5px; 
+		border-color: #000;
+		margin: auto;
+		width: 60%;
+		padding: 10px;
 	}
  </style>
  </head>
  <body>
- <div>
+ <div class = "center">
  <h1>Bob's Auto Parts</h1>
  <h3>Order Form</h3>
  <p>Please enter your details and then click <strong>Submit</strong> to enter your order.</p>
