@@ -3,7 +3,7 @@
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
 table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
-table.db-table th	{ background:#4CAF50; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.db-table th	{ background-color:#4CAF50; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
 table.db-table td	{ padding:15px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
 table.db-table tr	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
  </style>
@@ -51,9 +51,9 @@ $result = mysqli_query($dbConnection,"SELECT * FROM orders");
 $all_property = array();  //declare an array for saving property
 //showing property
 echo '<table cellpadding="0" cellspacing="0" class="db-table">>
-        <tr class="data-heading">';  //initialize table tag
+        <tr>';  //initialize table tag
 while ($property = mysqli_fetch_field($result)) {
-    echo '<td>' . $property->name . '</td>';  //get field name for header
+    echo '<th>' . $property->name . '</th>';  //get field name for header
     array_push($all_property, $property->name);  //save those to array
 }
 echo '</tr>'; //end tr tag
