@@ -2,10 +2,28 @@
 <head>
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
-table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; width: 100%; }
-table.db-table th	{ background-color:#4CAF50; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-table.db-table td	{ padding:15px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-table.db-table tr	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.db-table 		{ 
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc; 
+    width: 100%; 
+}
+table.db-table th	{ 
+    background-color:#4CAF50; 
+    padding:5px; 
+    border-left:1px solid #ccc;
+    color: white;
+    border-top:1px solid #ccc; 
+    }
+table.db-table td	{ 
+    padding:15px; 
+    border-left:1px solid #ccc; 
+    border-top:1px solid #ccc; 
+}
+table.db-table tr	{ 
+    padding:5px; 
+    border-left:1px solid #ccc; 
+    border-top:1px solid #ccc; 
+}
 .center {
 		background-color: #F7F7F7;
 		border: 5px; 
