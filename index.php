@@ -19,7 +19,10 @@
 		text-decoration: none;
 		margin: 4px 2px;
 		cursor: pointer;}
-	input { width: 400px; font-size: 1em; }
+	input {
+		width: 100%;
+		font-size: 1em; 
+		}
 	.center {
 		background-color: #F7F7F7; 
 	 	max-width: 400px;
