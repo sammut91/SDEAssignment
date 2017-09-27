@@ -25,8 +25,6 @@ foreach ($_SERVER as $key => $value)
     $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
     $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-
-    echo $value;
 }
 
 define('DB_NAME', $connectstr_dbname);
@@ -54,26 +52,6 @@ else
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
     echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
 
-    // $connectionInfo = array("UID" => "phpappuser@sdeassignment1", "pwd" => "1Password", "Database" => "Assignment1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-    // $serverName = "tcp:sdeassignment1.database.windows.net,1433";
-    // $conn =mysqli_init(); 
-    // mysqli_ssl_set($conn, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "assignment1sde-mysqldbserver.mysql.database.azure.com", "mysqldbuser@assignment1sde-mysqldbserver", {your_password}, {your_database}, 3306);
-
-    // // Create connection
-    // // $conn = new mysqli($servername,$user,$password,$dbname);
-
-    // // $conn = mysqli_init();
-    // // mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306);
-    // // if (mysqli_connect_errno($conn)) {
-    // // die('Failed to connect to MySQL: '.mysqli_connect_error());
-    // // }
-
-    // if( $conn ) {
-    //     echo "Connection established.<br />";
-    // } else{
-    //     echo "Connection could not be established.<br />";
-    //     die( print_r( sqlsrv_errors(), true));
-    // }
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $tyres = $_POST['tyres'];

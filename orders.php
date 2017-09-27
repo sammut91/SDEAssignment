@@ -27,8 +27,6 @@ foreach ($_SERVER as $key => $value)
     $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
     $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-
-    echo $value;
 }
 
 define('DB_NAME', $connectstr_dbname);
@@ -67,28 +65,6 @@ while ($row = mysqli_fetch_array($result)) {
     }
     echo '</tr>';
 }
-
-/* show tables */
-// $result = mysqli_query($dbConnection, 'SHOW TABLES') or die('cannot show fucking tables');
-// while($tableName = mysqli_fetch_row($result)) {
-
-// 	$table = $tableName[0];
-	
-// 	echo '<h3>',$table,'</h3>';
-// 	$result2 = mysqli_query($dbConnection, 'SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
-// 	if(mysqli_num_rows($result2)) {
-// 		echo '<table cellpadding="0" cellspacing="0" class="db-table">';
-// 		echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
-// 		while($row2 = mysqli_fetch_row($result2)) {
-// 			echo '<tr>';
-// 			foreach($row2 as $key=>$value) {
-// 				echo '<td>',$value,'</td>';
-// 			}
-// 			echo '</tr>';
-// 		}
-// 		echo '</table><br />';
-// 	}
-// }
 
 mysqli_close($dbConnection);
 ?>
