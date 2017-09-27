@@ -35,7 +35,8 @@
 	<input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastname;?>"><br/><br/>
 	<input type="number" name="tyres" placeholder="# of tyres" value="<?php echo $tyres;?>"><br/><br/>
     <input type="submit" name="Calculate"><br/>
- 
+	<input type="submit" name="Orders" value="View Orders" formaction="orders.php"<br/>
+
  </form>
  </div>
  </body>
