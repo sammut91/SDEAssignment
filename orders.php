@@ -16,8 +16,6 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
-$rows = [];
-
 foreach ($_SERVER as $key => $value)
 {
     if (strpos($key, "MYSQLCONNSTR_") !== 0)
@@ -38,12 +36,6 @@ define('DB_USER', $connectstr_dbusername);
 define('DB_PASSWORD', $connectstr_dbpassword);
 define('DB_HOST', $connectstr_dbhost);
 
-// Custom testing
-echo $connectstr_dbname."\n";
-echo $connectstr_dbusername."\n";
-echo $connectstr_dbpassword."\n";
-echo $connectstr_dbhost."\n";
-
 $dbConnection = $dbLink = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 if ($dbConnection)
@@ -56,7 +48,7 @@ else
 }
 /* show tables */
 
-$sql = "SHOW TABLES";
+$sql = "show tables;";
 if ($dbConnection->query($sql) === TRUE) {
     $result = $dbConnection->query($sql);
     while($tableName = mysql_fetch_row($result)) {
