@@ -48,7 +48,7 @@ else
 }
 
 /* show tables */
-$result = mysqli_query('SHOW TABLES',$connection) or die('cannot show tables');
+$result = mysqli_query('SHOW TABLES',$dbConnection) or die('cannot show tables');
 while($tableName = mysqli_fetch_row($result)) {
 
 	$table = $tableName[0];
