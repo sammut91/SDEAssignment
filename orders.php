@@ -47,27 +47,48 @@ else
     echo "Failed to connect to the database.\n";
 }
 
-/* show tables */
-$result = mysqli_query($dbConnection, 'SHOW TABLES') or die('cannot show fucking tables');
-while($tableName = mysqli_fetch_row($result)) {
+$result = mysqli_query($dbConnection,"SELECT * FROM orders");
+$all_property = array();  //declare an array for saving property
 
-	$table = $tableName[0];
-	
-	echo '<h3>',$table,'</h3>';
-	$result2 = mysqli_query($dbConnection, 'SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
-	if(mysqli_num_rows($result2)) {
-		echo '<table cellpadding="0" cellspacing="0" class="db-table">';
-		echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
-		while($row2 = mysqli_fetch_row($result2)) {
-			echo '<tr>';
-			foreach($row2 as $key=>$value) {
-				echo '<td>',$value,'</td>';
-			}
-			echo '</tr>';
-		}
-		echo '</table><br />';
-	}
+//showing property
+echo '<table class="data-table">
+        <tr class="data-heading">';  //initialize table tag
+while ($property = mysqli_fetch_field($result)) {
+    echo '<td>' . $property->name . '</td>';  //get field name for header
+    array_push($all_property, $property->name);  //save those to array
 }
+echo '</tr>'; //end tr tag
+
+//showing all data
+while ($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    foreach ($all_property as $item) {
+        echo '<td>' . $row[$item] . '</td>'; //get items using property value
+    }
+    echo '</tr>';
+}
+
+/* show tables */
+// $result = mysqli_query($dbConnection, 'SHOW TABLES') or die('cannot show fucking tables');
+// while($tableName = mysqli_fetch_row($result)) {
+
+// 	$table = $tableName[0];
+	
+// 	echo '<h3>',$table,'</h3>';
+// 	$result2 = mysqli_query($dbConnection, 'SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
+// 	if(mysqli_num_rows($result2)) {
+// 		echo '<table cellpadding="0" cellspacing="0" class="db-table">';
+// 		echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
+// 		while($row2 = mysqli_fetch_row($result2)) {
+// 			echo '<tr>';
+// 			foreach($row2 as $key=>$value) {
+// 				echo '<td>',$value,'</td>';
+// 			}
+// 			echo '</tr>';
+// 		}
+// 		echo '</table><br />';
+// 	}
+// }
 
 mysqli_close($dbConnection);
 ?>
