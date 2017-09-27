@@ -22,6 +22,10 @@
 		margin: 4px 2px;
 		cursor: pointer;}
 	input { width: 400px; font-size: 1em; }
+	form { 
+		margin: 0 auto; 
+		width:400px;	
+	}
  </style>
  </head>
  <body>
