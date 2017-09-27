@@ -3,8 +3,9 @@
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
 table.db-table 		{ border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
-table.db-table th	{ background:#eee; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
-table.db-table td	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.db-table th	{ background:#4CAF50; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.db-table td	{ padding:15px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table.db-table tr	{ padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc; }
  </style>
 </head>
 <<body>
@@ -45,9 +46,9 @@ else
     echo "Failed to connect to the database.\n";
 }
 
+
 $result = mysqli_query($dbConnection,"SELECT * FROM orders");
 $all_property = array();  //declare an array for saving property
-
 //showing property
 echo '<table cellpadding="0" cellspacing="0" class="db-table">>
         <tr class="data-heading">';  //initialize table tag
