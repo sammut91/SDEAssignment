@@ -13,9 +13,6 @@ input[type=submit] {
     background-color: #009acd;
     border: none;
     color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
     cursor: pointer;}
 input {
     width: 100%;
@@ -44,13 +41,20 @@ table.db-table tr	{
     border-top:1px solid #ccc; 
 }
 .center {
-		background-color: #F7F7F7;
-		border: 5px; 
-		border-color: #000;
-		margin: auto;
-		width: 60%;
-		padding: 10px;
-	}
+    background-color: #F7F7F7;
+    border: 5px; 
+    border-color: #000;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+.bottom {
+    background-color: #F7F7F7;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    vertical-align: bottom;
+}
  </style>
 </head>
 <body>
@@ -114,7 +118,7 @@ echo '</div>';
 
 mysqli_close($dbConnection);
 
-echo '<div>
+echo '<div class = "bottom">
 <form action="http://sdea1.azurewebsites.net/">
     <input type="submit" value="Back" />
 </form></div>   '
