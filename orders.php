@@ -54,7 +54,6 @@ table.db-table tr	{
  </style>
 </head>
 <body>
-
 <?php 
         // From the blog-post
 $connectstr_dbhost = '';
@@ -115,10 +114,10 @@ echo '</div>';
 
 mysqli_close($dbConnection);
 
-echo '<br/>
+echo '<div>
 <form action="http://sdea1.azurewebsites.net/">
     <input type="submit" value="Back" />
-</form>'
+</form></div>   '
 ?>
 </body>
 </html>
