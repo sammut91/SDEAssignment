@@ -1,6 +1,6 @@
  <html>
  <head>
- <Title>Bob's Auto Parts: Order Form</Title>
+ <Title>Big Book Store: Order Form</Title>
  <style type="text/css">
  	body {
 		background-color: #fff;
@@ -51,14 +51,14 @@
  </head>
  <body>
  <div class = "center">
- <h1>Bob's Auto Parts</h1>
- <h3>Order Form</h3>
+ <h1>Big Book Store</h1>
+ <h3>Order form for <i>Why Deployment Matters</i></h3>
  <p>Please enter your details and then click <strong>Submit</strong> to enter your order.</p>
  <form  action="welcome.php" method="post">
  
 	<input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstname;?>"><br/><br/>
 	<input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastname;?>"><br/><br/>
-	<input type="number" name="tyres" placeholder="# of tyres" value="<?php echo $tyres;?>"><br/><br/>
+	<input type="number" name="tyres" placeholder="# of books" value="<?php echo $tyres;?>"><br/><br/>
     <input type="submit" name="Calculate"><br/>
 	<input type="submit" name="Orders" value="View Orders" formaction="orders.php"<br/>
 
