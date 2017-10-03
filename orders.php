@@ -114,10 +114,11 @@ while ($row = mysqli_fetch_array($result)) {
 echo '</div>';
 
 mysqli_close($dbConnection);
-?>
-<br/>
+
+echo '<br/>
 <form action="http://sdea1.azurewebsites.net/">
     <input type="submit" value="Back" />
-</form>
+</form>'
+?>
 </body>
 </html>
