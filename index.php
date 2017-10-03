@@ -2,12 +2,27 @@
  <head>
  <Title>Bob's Auto Parts: Order Form</Title>
  <style type="text/css">
- 	body { background-color: #fff;
- 	    color: #333; font-size: .85em; margin: 20; padding: 20;
+ 	body {
+		background-color: #fff;
+ 	    color: #333;
+		font-size: .85em;
+		margin: 20;
+		padding: 20;
  	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
  	}
-	h1 { color: white; background-color: #009acd; margin-bottom: 0; padding-bottom: 0; text-align: center; }
-	h2, h3 { color: #00688b; margin-bottom: 0; padding-bottom: 0; text-align: center; }
+	h1 {
+		color: white;
+		background-color: #009acd; 
+		margin-bottom: 0; 
+		padding-bottom: 0; 
+		text-align: center; 
+	}
+	h2, h3 { 
+		color: #00688b; 
+		margin-bottom: 0; 
+		padding-bottom: 0; 
+		text-align: center; 
+	}
  	h1 { font-size: 2em; }
  	h2 { font-size: 1.75em; }
  	h3 { font-size: 1.2em; }

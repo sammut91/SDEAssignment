@@ -2,13 +2,32 @@
 <head>
 <title> Bob's Auto Parts: Order List</title>
 <style type="text/css">
+body {
+ 	color: #333;
+	font-size: .85em;
+	margin: 20;
+	padding: 20;
+ 	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+ 	}
+input[type=submit] { 
+    background-color: #009acd;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;}
+input {
+    width: 100%;
+    font-size: 1em; 
+    }
 table.db-table 		{ 
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc; 
     width: 100%; 
 }
 table.db-table th	{ 
-    background-color:#4CAF50; 
+    background-color:#009acd; 
     padding:5px; 
     border-left:1px solid #ccc;
     color: white;
@@ -96,4 +115,9 @@ echo '</div>';
 
 mysqli_close($dbConnection);
 ?>
+<br/>
+<form action="http://sdea1.azurewebsites.net/">
+    <input type="submit" value="Back" />
+</form>
+</body>
 </html>
