@@ -58,7 +58,7 @@
  
 	<input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstname;?>"><br/><br/>
 	<input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastname;?>"><br/><br/>
-	<input type="number" name="tyres" placeholder="# of books" value="<?php echo $tyres;?>"><br/><br/>
+	<input type="number" name="books" placeholder="# of books" value="<?php echo $books;?>"><br/><br/>
     <input type="submit" name="Calculate"><br/>
 	<input type="submit" name="Orders" value="View Orders" formaction="orders.php"<br/>
 

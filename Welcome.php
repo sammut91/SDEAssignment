@@ -50,15 +50,15 @@ else
 }
 
     echo $_POST["firstname"]." ".$_POST["lastname"].'<br/>';
-    echo "Total amount due is: ".($_POST["tyres"]* 110).'<br/>';
+    echo "Total amount due is: ".($_POST["books"]* 110).'<br/>';
 
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
-    $tyres = $_POST['tyres'];
+    $books = $_POST['books'];
     $id = time(void);
 
-    $sql = "INSERT INTO orders (firstname, id, lastname, tyres)
-    VALUES ('$firstname', '$id', '$lastname', '$tyres')";
+    $sql = "INSERT INTO orders (firstname, id, lastname, books)
+    VALUES ('$firstname', '$id', '$lastname', '$books')";
 
     if ($dbConnection->query($sql) === TRUE) {
     echo "New record created successfully";
