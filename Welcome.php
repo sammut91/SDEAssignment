@@ -56,9 +56,10 @@ else
     $lastname = $_POST['lastname'];
     $books = $_POST['books'];
     $id = time(void);
+    $amount = $_POST["books"]* 110; //version two
 
-    $sql = "INSERT INTO orders (firstname, id, lastname, books)
-    VALUES ('$firstname', '$id', '$lastname', '$books')";
+    $sql = "INSERT INTO orders (firstname, id, lastname, books, amount)
+    VALUES ('$firstname', '$id', '$lastname', '$books', '$amount')";
 
     if ($dbConnection->query($sql) === TRUE) {
     echo "New record created successfully";
